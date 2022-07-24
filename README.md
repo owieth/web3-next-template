@@ -1,2 +1,2 @@
 # web3-next-template
-Template Project for setting up quickly a web3 app with nextjs &amp; rainbowkit
+Template Project for quickly setting up a web3 app with nextjs &amp; rainbowkit
