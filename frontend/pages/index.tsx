@@ -6,7 +6,7 @@ import type { NextPage } from 'next';
 const Home: NextPage = () => {
   return (
     <>
-      <Container display='flex' justify='center' alignItems='center' style={{ height: '100vh' }} gap={5}>
+      <Container display='flex' justify='center' style={{ height: '100vh' }} gap={5}>
         <Grid.Container gap={2} alignItems='center'>
           <Grid xs={9}>
             <Text h1>Hi 👋, start your DApp here ➡️</Text>
@@ -17,7 +17,7 @@ const Home: NextPage = () => {
         </Grid.Container>
 
         <Grid.Container gap={2}>
-          <Grid xs={6}>
+          <Grid xs={6} alignItems='center'>
             <Col>
               <Text
                 h1
