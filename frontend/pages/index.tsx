@@ -2,8 +2,13 @@ import { Col, Container, Grid, Text } from '@nextui-org/react';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import Spline from '@splinetool/react-spline';
 import type { NextPage } from 'next';
+import { useEffect, useState } from 'react';
 
 const Home: NextPage = () => {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
+
   return (
     <>
       <Container display='flex' justify='center' style={{ height: '100vh' }} gap={5}>
@@ -48,7 +53,7 @@ const Home: NextPage = () => {
               </Text></Col>
           </Grid>
           <Grid xs={6}>
-            <Spline height={'700px'} width={'700px'} scene="https://prod.spline.design/JjyZ2JWcJGEegHzW/scene.splinecode" />
+            {mounted && <Spline height={'700px'} width={'700px'} scene="https://prod.spline.design/JjyZ2JWcJGEegHzW/scene.splinecode" />}
           </Grid>
         </Grid.Container>
       </Container>
