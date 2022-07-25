@@ -1,9 +1,8 @@
-import { Col, Container, Grid, Text } from '@nextui-org/react'
-import { ConnectButton } from '@rainbow-me/rainbowkit'
-import type { NextPage } from 'next'
-import { lazy, Suspense } from 'react';
-
-const Spline = lazy(() => import('@splinetool/react-spline'));
+import { Col, Container, Grid, Text } from '@nextui-org/react';
+import { ConnectButton } from '@rainbow-me/rainbowkit';
+import Spline from '@splinetool/react-spline';
+import type { NextPage } from 'next';
+import { Suspense } from 'react';
 
 const Home: NextPage = () => {
   return (
@@ -50,9 +49,7 @@ const Home: NextPage = () => {
               </Text></Col>
           </Grid>
           <Grid xs={6}>
-            <Suspense fallback={<div>Loading...</div>}>
-              <Spline height={'500px'} width={'700px'} scene="https://prod.spline.design/JjyZ2JWcJGEegHzW/scene.splinecode" />
-            </Suspense>
+            <Spline height={'500px'} width={'700px'} scene="https://prod.spline.design/JjyZ2JWcJGEegHzW/scene.splinecode" />
           </Grid>
         </Grid.Container>
       </Container>
